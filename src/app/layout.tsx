@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Londrina_Outline, Bungee_Outline, Oxygen, Carter_One } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./components/theme-provider";
+import { NavBar } from "./components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
+const londrina = Londrina_Outline({ weight: "400", subsets: ["latin"], variable: "--font-londrina" });
+const bungee = Bungee_Outline({ weight: "400", subsets: ["latin"], variable: "--font-bungee" }); 
+const oxygen = Oxygen({weight: "400", subsets: ["latin"], variable: "--font-oxygen" });
+const carter = Carter_One({weight: "400", subsets: ["latin"], variable: "--font-carter" });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +22,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="h-full w-full">
+      <body className={`${inter.className} ${londrina.variable} ${bungee.variable} ${oxygen.variable} ${carter.variable} bg-primary-foreground`}>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NavBar/>
+        {children}
+        </ThemeProvider>
+        </body>
     </html>
   );
 }

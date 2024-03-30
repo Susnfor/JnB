@@ -1,14 +1,16 @@
 import Image from "next/image";
-import { Hero } from "./components/Hero";
-import { NavBar } from "./components/NavBar";
+import {Hero, HeroChild, Services, FAQsection} from './components'
 
 export default function Home() {
   return (
     <main className="relative flex flex-col min-h-screen w-full h-full">
       <div className="
       "> 
-       {/* <NavBar /> */}
+
       <Hero/>
+      <HeroChild/>
+      <Services/>
+      <FAQsection/>
       </div>
      
     </main>

@@ -11,13 +11,13 @@ import { NavDropdownMobile } from './NavDropdownMobile'
 
 export const NavBar = () => {
   return (
-    <div className='sticky bg-primary/40 top-0 z-50 h-16 w-full flex justify-around items-center backdrop-blur-md '>
+    <nav className='fixed bg-primary/40 top-0 z-50 h-16 w-full flex justify-around items-center backdrop-blur-md uppercase'>
       <Link href="/">
       <Image src={logo} className='w-36 h-24' alt='logo'/>
       </Link>
       <div className=' md:gap-8 hidden md:flex'>
       <NavDropdown />
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
       </div>
       <div className=' md:hidden flex'>
         <NavDropdownMobile />
@@ -26,7 +26,7 @@ export const NavBar = () => {
 
 
     
-    </div>
+    </nav>
   
   )
 }

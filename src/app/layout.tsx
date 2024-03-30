@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Londrina_Outline, Bungee_Outline, Oxygen, Carter_One } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
-import { NavBar } from "./components/NavBar";
+import { NavBar, Footer } from "./components";
 
 const inter = Inter({ subsets: ["latin"] });
 const londrina = Londrina_Outline({ weight: "400", subsets: ["latin"], variable: "--font-londrina" });
@@ -32,6 +32,7 @@ export default function RootLayout({
           >
             <NavBar/>
         {children}
+        <Footer/>
         </ThemeProvider>
         </body>
     </html>

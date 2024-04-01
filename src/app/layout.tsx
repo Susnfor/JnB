@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full w-full">
-      <body className={`${inter.className} ${londrina.variable} ${bungee.variable} ${oxygen.variable} ${carter.variable} bg-primary-foreground`}>
+      <body className={`${inter.className} ${londrina.variable} ${bungee.variable} ${oxygen.variable} ${carter.variable} bg-primary`}>
       <ThemeProvider
             attribute="class"
             defaultTheme="system"

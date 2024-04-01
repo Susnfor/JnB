@@ -19,9 +19,9 @@ export const ServiceBox = ({title, desc, img, link}: ServiceBoxProps ) => {
         </div>
         <div className='flex flex-col items-center px-10'>
           <div className='flex items-center justify-center h-16'>
-        <h1 className=' text-xl font-bold text-center font-carter text-accent'>{title}</h1>
+        <h1 className=' text-xl font-bold text-center font-carter'>{title}</h1>
         </div>
-        <p className='text-accent max-w-xl'>{desc}</p>
+        <p className='max-w-xl'>{desc}</p>
 
         </div>
 

@@ -1,7 +1,13 @@
 // 'use client'
 import React from 'react'
+// import { useState } from "react"
 import Link from "next/link"
-import { ChartBarIcon, Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid"
+import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid"
+
+
+// import { BurgerClose as Icon } from "react-icons-animated";
+// import { CloseBtn } from './CloseBtn'
+
 
 import {
   DropdownMenu,
@@ -63,9 +69,22 @@ export const navItemsDropdown = [
 
 ]
 export const NavDropdownMobile = () => {
+
+  // const [isClosed, setIsClosed] = useState<boolean>(true);
+
   return (
     <DropdownMenu>
-    <DropdownMenuTrigger><Bars3BottomRightIcon className="h-6 w-6"/></DropdownMenuTrigger>
+    <DropdownMenuTrigger >
+
+      {/* {
+        !isClosed ? <XMarkIcon className="h-6 w-6" onClick={() => setIsClosed(!isClosed)}/> :   <Bars3BottomRightIcon className="h-6 w-6" onClick={() => setIsClosed(!isClosed)}/>
+      } */}
+      <Bars3BottomRightIcon className="h-6 w-6"/>
+      <span className="sr-only">Open main menu</span>
+
+
+
+    </DropdownMenuTrigger>
     <DropdownMenuContent>
       {navItemsDropdown.map((item, index) => {
         return (

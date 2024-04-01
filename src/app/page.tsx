@@ -1,5 +1,6 @@
+
 import Image from "next/image";
-import {Hero, HeroChild, Services, FAQsection} from './components'
+import {Hero, HeroChild, Services, FAQsection, BookingForm} from './components'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroChild/>
       <Services/>
       <FAQsection/>
+      <BookingForm/>
       </div>
      
     </main>

@@ -2,6 +2,8 @@
 import React from 'react'
 import Link from "next/link"
 
+import { ThemeToggle } from "./ThemeToggle"
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -21,6 +23,7 @@ export const navItemsDropdown = [
 
   {
       title: 'Services',
+      link: '/services',
       content: [ {
         title: 'Consultations',
         desc:   'We offer a full spectrum of services for individuals and businesses. ',
@@ -47,6 +50,7 @@ export const navItemsDropdown = [
   },
   {
       title: 'Who We Are',
+      link: '/about',
       content: [ {
         title: 'Our Team',
         desc:   'We offer a full spectrum of services for individuals and businesses. ',
@@ -69,16 +73,20 @@ export const NavDropdown = () => {
     <NavigationMenu>
     <NavigationMenuList>
       {
+        // map through navitems to get title for navbar/only for navitems with content
         navItemsDropdown.map((item) => {
           return (
           <NavigationMenuItem key={item.title} >
-            <NavigationMenuTrigger className={cn("bg-white/0 hover:bg-white/10")}>{item.title}</NavigationMenuTrigger>
+            {/* nagivation title e.g. services */}
+            <Link href={item.link}><NavigationMenuTrigger className={cn("bg-white/0 hover:bg-white/10, uppercase")}>{item.title}</NavigationMenuTrigger></Link>
             <NavigationMenuContent className="NavigationMenuContent">
               <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {item.content.map((item) => (
                 <li key={item.title} >
-                  <NavigationMenuLink key={item.title} className={`${navigationMenuTriggerStyle()} py-3`}>
+                  {/* nagivation dropdown   */}
+                  <NavigationMenuLink key={item.title} className={`${navigationMenuTriggerStyle()} py-3 uppercase`}>
                     <h3>{item.title}<br />
+                    {/* nagigation desc */}
                     {/* <span className="text-sm text-muted-foreground leading-snug">
                       {item.desc}
                     </span> */}

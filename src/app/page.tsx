@@ -7,7 +7,6 @@ export default function Home() {
     <main className="relative flex flex-col min-h-screen w-full h-full">
       <div className="
       "> 
-
       <Hero/>
       <HeroChild/>
       <Services/>

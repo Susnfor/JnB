@@ -75,7 +75,7 @@ export const Services = () => {
         {/* bg image */}
         <div className='w-full h-full min-h-screen bg-black/45 absolute -z-10 p-0 m-0'></div>
         <div className='w-full h-full min-h-screen bg-main absolute -z-30 p-0 m-0'>
-    <Image src={bg} className='w-full h-full top-0 m-0 p-0 -z-30 absolute opacity-15'   alt="hero" />
+    <Image src={bg} className='w-full h-full top-0 m-0 p-0 -z-30 absolute opacity-15' style={{objectFit:"cover"}}  alt="hero" />
     </div>
     </section>
   )

@@ -19,8 +19,8 @@ export const Hero = () => {
         <h1 className=' text-5xl font-bold text-center font-carter mb-6'>Consultations, <span className='text-third'>Equipment</span>, Recruitment & Contracted <br></br><span className={cn(" font-bungee font-bold text-third")}>Services</span></h1>
         {/* <p className='text-slate-200 max-w-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi vel cumque, nobis ipsa porro similique veritatis illo cupiditate. Pariatur dolorum modi a molestiae dicta architecto aliquid corrupti itaque! Facere, optio.</p> */}
         <div className='flex mb-6'>
-        <Link href="#" className={`${buttonVariants({ variant: 'secondary'})}, mr-2`}>What We Do</Link>
-        <Button variant='ghost'>Contact Us &rarr;</Button>
+        <Link href="#services" className={`${buttonVariants({ variant: 'secondary'})}, mr-2`}>What We Do</Link>
+        <Link href={'/contact'}><Button variant='ghost'>Contact Us &rarr;</Button></Link>
         </div>
         </div>
         {/* right side image */}
@@ -29,28 +29,20 @@ export const Hero = () => {
         </header>
 
 
-        {/* <div className='w-full h-full top-0 m-0 p-0 bg-black/45 -z-10 fixed'> </div>
-        <div className='w-full h-full min-h-screen bg-main -z-30 p-0 m-0 fixed'>
-    <Image src={bgblur} className='w-full h-full top-0 m-0 p-0 -z-30 fixed opacity-15' priority={true}   alt="hero" />
-    </div> */}
-
+        
 
         </div>
-        {/* <div className='w-full h-full min-h-screen bg-black/45 absolute -z-10 p-0 m-0'></div> */}
+     
        
-        {/* dark overlay */}
+       
 
 
-        <div className='w-full h-full top-0 m-0 p-0 bg-black/45 -z-10 fixed'> </div>
+        {/* bg image + tint */}
+        <div className='w-full h-full top-0 m-0 p-0 bg-black/30 -z-10 fixed'> </div>
         <div className='w-full h-full min-h-screen bg-main -z-30 p-0 m-0 fixed'>
     <Image src={bgblur} className='w-full h-full top-0 m-0 p-0 -z-30 fixed opacity-15' priority={true} style={{objectFit:"cover"}} alt="hero" />
     </div>
 
-
-
-        {/* bg image */}
-        {/* <Image src={bgblur} className='w-full h-full fixed top-0 m-0 p-0 -z-10 '   alt="hero" priority={true} /> */}
-    {/* <Image src={bgblur} className='w-full h-full fixed top-0 m-0 p-0 -z-30'   alt="hero" priority={true} /> */}
         </>
   )
 }

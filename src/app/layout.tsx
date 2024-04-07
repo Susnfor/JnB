@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 import { NavBar, Footer } from "./components";
 
+
+
 const inter = Inter({ subsets: ["latin"] });
 const londrina = Londrina_Outline({ weight: "400", subsets: ["latin"], variable: "--font-londrina" });
 const bungee = Bungee_Outline({ weight: "400", subsets: ["latin"], variable: "--font-bungee" }); 

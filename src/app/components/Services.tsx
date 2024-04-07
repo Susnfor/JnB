@@ -57,6 +57,7 @@ export const Services = () => {
 </div>
 <div className='flex gap-6 lg:gap-3 py-10 flex-wrap justify-center'>
     {
+      //map through services
       serviceItems.map((item, index:number) => (
         <ServiceBox key={index} title={item.title} desc={item.description} img={item.image} link={item.link} />
       ))
@@ -64,14 +65,12 @@ export const Services = () => {
 
 
      </div>
-    <Button variant='secondary'>Learn More &rarr;</Button>
+    <Link href={'/services'} className={`${buttonVariants({ variant: 'secondary'})}, mt-6`}>Learn More &rarr;</Link>
 
 
     </div>
 
 
-{/* dark overlay */}
-{/* <div className='w-full h-full min-h-screen absolute top-0 m-0 p-0 bg-black/70 -z-20'> </div> */}
         {/* bg image */}
         <div className='w-full h-full min-h-screen bg-black/45 absolute -z-10 p-0 m-0'></div>
         <div className='w-full h-full min-h-screen bg-main absolute -z-30 p-0 m-0'>

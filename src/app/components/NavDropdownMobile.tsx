@@ -1,12 +1,8 @@
-// 'use client'
+
 import React from 'react'
-// import { useState } from "react"
 import Link from "next/link"
-import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid"
+import { Bars3BottomRightIcon } from "@heroicons/react/24/solid"
 
-
-// import { BurgerClose as Icon } from "react-icons-animated";
-// import { CloseBtn } from './CloseBtn'
 
 
 import {
@@ -20,65 +16,18 @@ import {
 
 import { cn } from '@/lib/utils'
 
-
-export const navItemsDropdown = [
-
-  {
-      title: 'Services',
-      content: [ {
-        title: 'Consultations',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '#',
-      },
-      {
-        title: 'Contracted',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '#',
-      },
-      {
-        title: 'Equipment',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '#',
-      },
-      {
-        title: 'Recruitment',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '#',
-      }
-    ],
+//navitems import 
+import { navItemsnoDrop, navItemsDropdown } from './NavItemsList'
 
 
-  },
-  {
-      title: 'Who We Are',
-      content: [ {
-        title: 'Our Team',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '#',
-      },
-      {
-        title: 'Our Clients',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '#',
-      }
-    ]
-
-  },
- 
- 
-
-]
 export const NavDropdownMobile = () => {
 
-  // const [isClosed, setIsClosed] = useState<boolean>(true);
 
   return (
     <DropdownMenu>
     <DropdownMenuTrigger >
 
-      {/* {
-        !isClosed ? <XMarkIcon className="h-6 w-6" onClick={() => setIsClosed(!isClosed)}/> :   <Bars3BottomRightIcon className="h-6 w-6" onClick={() => setIsClosed(!isClosed)}/>
-      } */}
+  
       <Bars3BottomRightIcon className="h-6 w-6"/>
       <span className="sr-only">Open main menu</span>
 
@@ -108,9 +57,20 @@ export const NavDropdownMobile = () => {
       }
         
       )}
-      <Link href="#">
+      {
+        navItemsnoDrop.map((item, index) => {
+          return (
+            <Link href={item.link} key={index}>
+            <DropdownMenuItem key={index} className='font-bold'>
+              {item.title}
+            </DropdownMenuItem>
+            </Link>
+          )
+        })
+      }
+      {/* <Link href="#">
       <DropdownMenuItem className='font-bold'>Contact</DropdownMenuItem>
-      </Link>
+      </Link> */}
       {/* <DropdownMenuItem>Billing</DropdownMenuItem>
       <DropdownMenuItem>Team</DropdownMenuItem>
       <DropdownMenuItem>Subscription</DropdownMenuItem> */}

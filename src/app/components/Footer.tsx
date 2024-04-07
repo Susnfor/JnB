@@ -29,9 +29,9 @@ export const Footer = () => {
         
       ]
   return (
-    <footer className='w-full bg-primary flex text-secondary py-5 px-10 border-t-[1px] relative shadow-md justify-between'>
+    <footer className='w-full bg-primary/30 flex text-secondary py-5 px-10 border-t-[1px] border-white relative shadow-md justify-between'>
     <div className=''>
-        <p>Copyright © {year} JnB Production Studios LTD.</p>
+        <p>Copyright © {year} JnB Production Studios LTD. Registered Company Number 15447811</p>
     </div>
     <div>
     <ul className='flex gap-5 '>
@@ -44,6 +44,7 @@ export const Footer = () => {
         }
       </ul>
     </div>
+    
     </footer>
   )
 }

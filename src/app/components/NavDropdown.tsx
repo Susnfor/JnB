@@ -2,7 +2,6 @@
 import React from 'react'
 import Link from "next/link"
 
-import { ThemeToggle } from "./ThemeToggle"
 
 import {
   NavigationMenu,
@@ -18,56 +17,10 @@ import {
 
 import { cn } from '@/lib/utils'
 
-
-export const navItemsDropdown = [
-
-  {
-      title: 'Services',
-      link: '/services',
-      content: [ {
-        title: 'Consultations',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '/services',
-      },
-      {
-        title: 'Contracted',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '#',
-      },
-      {
-        title: 'Equipment',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '#',
-      },
-      {
-        title: 'Recruitment',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '#',
-      }
-    ],
+//navitems
+import { navItemsnoDrop, navItemsDropdown } from './NavItemsList'
 
 
-  },
-  {
-      title: 'Who We Are',
-      link: '/about',
-      content: [ {
-        title: 'Our Team',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '/about',
-      },
-      {
-        title: 'Our Clients',
-        desc:   'We offer a full spectrum of services for individuals and businesses. ',
-        path:   '#',
-      }
-    ]
-
-  },
- 
- 
-
-]
 export const NavDropdown = () => {
   return (
     <NavigationMenu>
@@ -78,20 +31,18 @@ export const NavDropdown = () => {
           return (
           <NavigationMenuItem key={item.title} >
             {/* nagivation title e.g. services */}
-            <Link href={item.link}><NavigationMenuTrigger className={cn("bg-white/0 hover:bg-white/10, uppercase")}>{item.title}</NavigationMenuTrigger></Link>
+            <Link href={item.link}><NavigationMenuTrigger className={cn("bg-white/0 hover:bg-white/10, uppercase ")}>{item.title}</NavigationMenuTrigger></Link>
             <NavigationMenuContent className="NavigationMenuContent">
               <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {item.content.map((item) => (
                 <li key={item.title} >
                   {/* nagivation dropdown   */}
+                  <Link href={item.path}>
                   <NavigationMenuLink key={item.title} className={`${navigationMenuTriggerStyle()} py-3 uppercase`}>
-                    <h3>{item.title}<br />
-                    {/* nagigation desc */}
-                    {/* <span className="text-sm text-muted-foreground leading-snug">
-                      {item.desc}
-                    </span> */}
+                    <h3 >{item.title}<br />
                     </h3>
                   </NavigationMenuLink>
+                  </Link>
                   </li>
               ))}
               </ul>
@@ -100,14 +51,33 @@ export const NavDropdown = () => {
           </NavigationMenuItem>
         )
     })}
-    
+{/*     
       <NavigationMenuItem>
     <Link href="/contact" legacyBehavior passHref>
       <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-white/0 hover:bg-white/10`}>
         Contact
       </NavigationMenuLink>
     </Link>
-  </NavigationMenuItem>
+  </NavigationMenuItem> */}
+
+{
+  //map through items with no drop down
+  navItemsnoDrop.map((item) => {
+    return (
+      <NavigationMenuItem key={item.title}>
+        <Link href={item.link} legacyBehavior passHref>
+          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-white/0 hover:bg-white/10`}>
+            {item.title}
+          </NavigationMenuLink>
+        </Link>
+      </NavigationMenuItem>
+    )
+  })
+}
+
+
+
+
   <NavigationMenuIndicator className="NavigationMenuIndicator">
             <div className="Arrow" />
           </NavigationMenuIndicator>

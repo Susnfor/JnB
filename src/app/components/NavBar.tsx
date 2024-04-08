@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { ThemeToggle } from "./ThemeToggle"
 import { NavDropdown } from "./NavDropdown"
 import Image from 'next/image'
@@ -19,10 +19,17 @@ export const NavBar = () => {
       setShowBackground(false)
     }
   }
-  if(typeof window !== 'undefined') //makes sure its executed only in browser environment
-{
-  window.addEventListener('scroll', handleScroll);
-}
+ 
+  useEffect(() => {
+    if(typeof window !== 'undefined') //makes sure its executed only in browser environment
+    {
+      window.addEventListener('scroll', handleScroll);
+    }
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    };
+
+  }, [])
 
   return (
     <nav className={` transition fixed top-0 z-30 h-16 w-full flex justify-around items-center  uppercase`}>

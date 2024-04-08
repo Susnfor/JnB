@@ -29,8 +29,8 @@ export const Footer = () => {
         
       ]
   return (
-    <footer className='w-full bg-primary/30 flex text-secondary py-5 px-10 border-t-[1px] border-white relative shadow-md justify-between'>
-    <div className=''>
+    <footer className='w-full bg-primary/30 flex text-secondary py-5 px-10 border-t-[1px] border-white relative shadow-md flex-col md:flex-row justify-center items-center md:justify-between'>
+    <div className='text-center'>
         <p>Copyright © {year} JnB Production Studios LTD. Registered Company Number 15447811</p>
     </div>
     <div>

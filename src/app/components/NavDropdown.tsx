@@ -27,12 +27,12 @@ export const NavDropdown = () => {
     <NavigationMenuList>
       {
         // map through navitems to get title for navbar/only for navitems with content
-        navItemsDropdown.map((item) => {
+        navItemsDropdown.map((item, index) => {
           return (
-          <NavigationMenuItem key={item.title} >
+          <NavigationMenuItem key={index} >
             {/* nagivation title e.g. services */}
             <Link href={item.link}><NavigationMenuTrigger className={cn("bg-white/0 hover:bg-white/10, uppercase ")}>{item.title}</NavigationMenuTrigger></Link>
-            <NavigationMenuContent className="NavigationMenuContent">
+            <NavigationMenuContent className="NavigationMenuContent" key={index}>
               <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {item.content.map((item) => (
                 <li key={item.title} >

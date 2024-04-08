@@ -18,17 +18,17 @@ export const navItemsnoDrop = [
         content: [ {
           title: 'Consultations',
           desc:   'We offer a full spectrum of services for individuals and businesses. ',
-          path:   '/services#consultations',
+          path:   '/services/#consultations',
         },
         {
           title: 'Contracted',
           desc:   'We offer a full spectrum of services for individuals and businesses. ',
-          path:   '/services#recruitment',
+          path:   '/services/#recruitment',
         },
         {
           title: 'Equipment',
           desc:   'We offer a full spectrum of services for individuals and businesses. ',
-          path:   '/services#equipment',
+          path:   '/services/#equipment',
         },
       ],
   

@@ -13,8 +13,8 @@ import {
 } from "framer-motion";
 import useScrollSnap from "react-use-scroll-snap";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
+import CardFlip from "@/app/services/component/CardFlip";
+import {  ArrowDownIcon, ArrowUpIcon } from "@heroicons/react/24/outline";
 
 //pics for services
 import charts from "@/app/assets/charts.png";
@@ -41,6 +41,7 @@ export const serviceItems = [
     image: charts,
     link: "/services#marketing",
     bg: s1,
+    position: "left",
   },
   {
     title: "Recruitment & Contracting",
@@ -50,6 +51,7 @@ export const serviceItems = [
     image: recruitment,
     link: "/services#recruitment",
     bg: s2,
+    position: "right",
   },
   {
     title: "Equipment Leasing",
@@ -59,6 +61,7 @@ export const serviceItems = [
     image: podcast,
     link: "/services#equipment",
     bg: s3,
+    position: "left",
   },
   {
     title: "Consultations",
@@ -68,6 +71,7 @@ export const serviceItems = [
     image: contracted,
     link: "/services#consultations",
     bg: s4,
+    position: "right",
   },
 ];
 
@@ -75,18 +79,6 @@ function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-const ServicesItems = ({item ,index, position}:any) => {
-
-
-  return (
-    <div className="">
-      <Image src={item.image} alt="service" width={300} height={300} />
-
-   
-   
-   </div>
-  )
-}
 
 export const ServicesScroll = () => {
    
@@ -114,9 +106,28 @@ export const ServicesScroll = () => {
 <PageBackboard colour="bg-black/45" func={() => goto(0)} before='Our' after='Services' desc='We offer a range of services including digital marketing, recruitment, and consulting. We also provide equipment leasing and contract work.' bg={bg}/>
 
 
-<section className="relative w-full min-h-screen flex gap-6 flex-wrap justify-center items-center " ref={scrollRef}>
+<section className="relative w-full min-h-screen h-full " ref={scrollRef}>
 
 
+{serviceItems.map((item, index) => (
+  <section key={index} id={item.id}>
+<div key={index} className={`${item.position === 'left' ? 'bg-zinc-300' : 'bg-gray-400'} h-screen w-full relative  }`}>
+<CardFlip>
+  <div className="flip-card-front  w-full h-full shadow-lg">
+<Image src={item.image} alt="service" className="rounded-lg w-full h-full border-4 hover:scale-105 transition duration-200"  style={{objectFit: 'cover'}} />
+  </div>
+  <div className=" flip-card-back rounded-lg bg-main w-full h-full border-4 border-white flex items-center flex-col justify-center text-center">
+    <h2 className="text-3xl font-bold">{item.title}</h2>
+    <p>{item.description}</p>
+    </div>
+</CardFlip>
+<div className="  absolute bottom-4 right-0 flex items-end justify-end p-5 z-0">
+<button onClick={() => (index === 3 ? goto(0) : goto(index + 1))} >{index === 3 ? <ArrowUpIcon className="w-10 h-10 text-white"/> : <ArrowDownIcon className="w-10 h-10 text-white"/>}</button>
+</div>
+</div>
+</section>
+
+))}
  
 </section>
 
@@ -124,7 +135,7 @@ export const ServicesScroll = () => {
 
 
   
-  <motion.div className="fixed left-0 right-0 bottom-10 bg-third h-5" style={{ scaleX }} />
+  <motion.div className="fixed left-0 right-0 bottom-4 bg-third h-5" style={{ scaleX }} />
 
  
  

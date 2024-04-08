@@ -3,7 +3,7 @@ import { PageBackboard } from '../components/PageBackboard'
 import bg from "@/app/assets/bgslant.svg";
 import Image from 'next/image'
 import PriceItems from './components/PriceItems';
-import { FAQsection } from '../components';
+import { ContactForm, FAQsection } from '../components';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 
@@ -25,6 +25,9 @@ const page = () => {
       
       <div className=''>
       <FAQsection />
+      </div>
+      <div>
+        <ContactForm />
       </div>
     
       </div>

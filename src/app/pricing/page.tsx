@@ -10,11 +10,13 @@ import { buttonVariants } from '@/components/ui/button';
 
 const page = () => {
   return (
-    <div className='w-full relative min-h-screen pt-10 overflow-hidden'>
-      <PageBackboard height="h-full" bgposition="fixed" colour="bg-red-950/50" before="Our" after="Pricing" desc="We have different pricing plans for our users. You can choose the one that is right for you." bg={bg} />
+    <div className='w-full relative min-h-screen overflow-hidden'>
+      {/* <PageBackboard  bgposition="fixed" colour="bg-red-950/50" before="Our" after="Pricing" desc="We have different pricing plans for our users. You can choose the one that is right for you." bg={bg} /> */}
       <div className='relative '>
-      <div className='min-h-screen flex items-center justify-center flex-col '>
-      <div className='rounded-xl mx-20 py-10 justify-center flex items-center'>
+      <div className='min-h-screen flex items-center justify-center flex-col bg-primary-foreground pt-20'>
+      <h1 className=' text-5xl font-carter  text-white'>Our <span className='text-third'>Pricing</span></h1>
+      <p className=' max-w-xl text-center text-white mb-6'>We have different pricing plans for our users. You can choose the one that is right for you.</p>
+      <div className='rounded-xl mx-20 py-10 justify-center flex items-center '>
       <PriceItems />
       </div>
 

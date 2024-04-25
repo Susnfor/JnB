@@ -4,7 +4,7 @@ import { PriceItem } from './PriceItem'
 
 const items = [
     {
-        service: 'Digital Marketing Consultations',
+        service: 'Marketing Consultations',
         price: '1000',
         benefits: ['Expert advice on how to grow your business',
         'Advice on how to get started',

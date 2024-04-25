@@ -18,12 +18,12 @@ export const PriceItem = ({service, price, benefits, link, bold=false }: PriceIt
 
   return (
     <section>
-      <div className={`flex flex-col  rounded-xl shadow-sm p-4 w-96 ${bold ? "bg-primary-foreground py-14 shadow-2xl border-2" : "bg-card"}`}>
+      <div className={`flex flex-col  rounded-xl shadow-sm p-4 w-96 ${bold ? "bg-primary/40  shadow-2xl --py-14 border-2" : "bg-card"}`}>
         <header className='font-bold'>
           <h1 className='text-2xl'>{service}</h1>
-          <p className='mt-3'> from <span className={` text-3xl ${bold ? "text-card" : "text-third"}`}>£{price}</span><br/> per month</p>
+          <p className='mt-3'> from<br/> <span className={` text-3xl ${bold ? "text-card" : "text-third"}`}>£{price}</span>/ Month</p>
         </header>
-        <div className={`flex flex-col pt-10 font-carter `}>
+        <div className={`flex flex-col pt-4 font-carter `}>
           <h3 className=''>What&apos;s included:</h3>
           <ul className={`flex flex-col  text-extra px-4 font-thin mb-5`}>
             {benefits.map((benefit, i) => <li key={i} className='flex items-center py-2'><CheckBadgeIcon className='w-5 h-5 mr-2'/>{benefit}</li>)}

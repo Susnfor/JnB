@@ -1,4 +1,4 @@
-import { ComparisonProps, FAQsProps, PricingProps } from '~/shared/types';
+import { ComparisonProps, FAQsProps, PricingProps, CallToActionProps } from '~/shared/types';
 import { HeroProps } from '~/shared/types';
 
 // Hero data on Pricing page *******************
@@ -273,6 +273,18 @@ export const faqs3Pricing: FAQsProps = {
       description: `Nullam imperdiet sapien tincidunt erat dapibus faucibus. Vestibulum a sem nec lorem imperdiet scelerisque non sed lacus. Ut pulvinar id diam vitae auctor. Nam tempus, neque et elementum consectetur, ex ipsum pulvinar risus, vel sodales ligula tortor eu eros.`,
     },
   ],
+  callToAction: {
+    text: 'Contact us',
+    href: '/contact',
+  },
+};
+
+export const callToActionPricing: CallToActionProps = {
+  id: 'callToAction-on-pricing',
+  hasBackground: false,
+  title: 'Still have questions?',
+  subtitle:
+    'Need more clarity about the services we provide? Well click the button below and send us a message.',
   callToAction: {
     text: 'Contact us',
     href: '/contact',

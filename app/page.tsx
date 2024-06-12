@@ -4,7 +4,7 @@ import { SITE } from '~/config.js';
 
 import Hero from '~/components/widgets/Hero';
 import SocialProof from '../src/components/widgets/SocialProof';
-import Features from '~/components/widgets/Features';
+import Features from '~/components/widgets/FeaturesHome';
 import Content from '~/components/widgets/Content';
 import Steps from '~/components/widgets/Steps';
 import Testimonials from '~/components/widgets/Testimonials';

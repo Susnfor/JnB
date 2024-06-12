@@ -42,7 +42,7 @@ const Page = () => {
       {/* <Steps {...stepsAbout} /> */}
       {/* <Features3 {...features3About} /> */}
       {/* <Features {...featuresAbout} /> */}
-      <Team {...teamHeader} />
+      {/* <Team {...teamHeader} /> */}
       <Team {...teamAbout} />
       <Team {...teamAbout2} />
       <Testimonials2 {...testimonials2About} />

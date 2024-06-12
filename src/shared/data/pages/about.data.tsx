@@ -284,10 +284,10 @@ export const teamAbout: TeamProps = {
   hasBackground: true,
   ifDesc: true,
   header: {
-    // title: 'Jerome',
+    title: 'Meet our team',
     subtitle:
       'Hi! My name is Jerome Jermaine and I am a co-founder of JnB Production Studios. I have been passionate about content creation and performing from a young age, finding immense joy in sharing my views and ideas through YouTube videos, musicals, and debates. Throughout the years, I became fascinated with how content creators have found ways to encapsulate our attention and build a loyal following. Similarly, I have found enjoyment in researching how businesses are able to create such brilliant advertisement campaigns to sell literally anything! I love the challenge of producing content which is both professional and captivating as it allows me to use my creative skills help businesses find their voice, similarly to how content creation allowed me to find my own.',
-    // tagline: 'team',
+    tagline: 'team',
   },
   teams: [
     {

@@ -26,6 +26,7 @@ type Header = {
 
 type HeadlineProps = {
   header: Header;
+  Desc?: Boolean;
   containerClass?: string;
   titleClass?: string;
   subtitleClass?: string;

@@ -7,7 +7,8 @@ import ItemTeam from '../common/ItemTeam';
 
 const Team = ({ header, teams, id, hasBackground = false, ifDesc = false, }: TeamProps) => (
   <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
-    {header && !ifDesc && <Headline header={header} titleClass="text-2xl sm:text-5xl" />}
+    {header && <Headline header={header} titleClass="text-2xl sm:text-5xl" />}
+
     <div className="flex items-stretch justify-center">
       <div className="grid grid-cols-1 gap-4 dark:text-white  ">
         {teams && teams.map(({ name, occupation, image, items }, index) => (
@@ -28,7 +29,7 @@ const Team = ({ header, teams, id, hasBackground = false, ifDesc = false, }: Tea
         ))}
       </div>
     </div>
-{header && ifDesc && <Headline header={header} titleClass="text-2xl sm:text-3xl" />}
+{header && ifDesc && <Headline header={header} Desc={ifDesc} titleClass="text-2xl sm:text-3xl" />}
   </WidgetWrapper>
 );
 

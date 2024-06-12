@@ -32,13 +32,14 @@ import starBackgroundImg from '~/assets/images/stare-background.jpg'
 // Hero data on Services page *******************
 export const heroServices: HeroProps = {
   title: 'Our Services',
+  tagline: 'Services',
   subtitle:
     'Expert Consultations for Social Media and Podcasts.',
-  callToAction: {
-    text: 'Learn More',
-    href: '/',
-    targetBlank: true,
-  },
+  // callToAction: {
+  //   text: 'Learn More',
+  //   href: '/',
+  //   targetBlank: true,
+  // },
 };
 
 // Feature2 data on Services page *******************

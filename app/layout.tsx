@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     default: SITE.title,
   },
   description: SITE.description,
+  icons: {
+    icon: '/jnbicon.png', // /public path for icon
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps) {

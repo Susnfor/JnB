@@ -9,6 +9,7 @@ import {
   TestimonialsProps,
 } from '~/shared/types';
 import hero2Img from '~/assets/images/hero2.jpg';
+import JnBhero from  '~/assets/images/JnBcircles.png';
 import {
   IconAdjustments,
   IconAward,
@@ -38,22 +39,22 @@ import {
 
 // Hero2 data on About page *******************
 export const hero2About: HeroProps = {
-  title: 'Great companies are made by great people',
+  title: 'But Who Are We?',
   subtitle:
-    'Vivamus venenatis, lectus a pellentesque placerat, felis tellus ultrices eros, et aliquam sapien nibh sed sem. Fusce ut ante eget purus viverra malesuada. Morbi eget mi maximus, ultricies urna eget, tristique lorem. Fusce cursus venenatis quam, a blandit lectus vulputate id. Praesent id interdum orci, vitae condimentum dui.',
-  tagline: 'About Us Demo Page',
+    'Behind every great business is a powerful narrative, but most of the world will never hear the tale.',
+  tagline: 'About Us',
+  // callToAction: {
+  //   text: 'Our Services',
+  //   href: '/services',
+  //   targetBlank: true,
+  // },
   callToAction: {
-    text: 'View jobs',
-    href: 'https://www.linkedin.com/',
-    targetBlank: true,
-  },
-  callToAction2: {
     text: 'Contact us',
     href: '/contact',
   },
   image: {
-    src: hero2Img,
-    alt: 'Hero TailNext',
+    src: JnBhero,
+    alt: 'Hero About',
   },
 };
 
@@ -265,7 +266,7 @@ export const featuresAbout: FeaturesProps = {
 // Team data on About page *******************
 export const teamAbout: TeamProps = {
   id: 'team-on-about',
-  hasBackground: false,
+  hasBackground: true,
   header: {
     title: 'Meet our executive team',
     subtitle:
@@ -479,7 +480,7 @@ export const teamAbout: TeamProps = {
 // Testimonial2 data on About page *******************
 export const testimonials2About: TestimonialsProps = {
   id: 'testimonialsTwo-on-about',
-  hasBackground: true,
+  hasBackground: false,
   isTestimonialUp: true,
   header: {
     title: 'Our success stories',

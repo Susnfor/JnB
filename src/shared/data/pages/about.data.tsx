@@ -10,6 +10,8 @@ import {
 } from '~/shared/types';
 import hero2Img from '~/assets/images/hero2.jpg';
 import JnBhero from  '~/assets/images/JnBcircles.png';
+import IrfanImg from '~/assets/images/irfan.jpeg';
+import JeromeImg from '~/assets/images/jerome.jpg';
 import {
   IconAdjustments,
   IconAward,
@@ -89,7 +91,7 @@ export const featuresFourAbout: FeaturesProps = {
   header: {
     title: 'Our mission',
     subtitle:
-      'Quisque laoreet nisi et lectus consectetur, at placerat libero dictum. Donec sed hendrerit turpis. Nunc vel nibh blandit, hendrerit turpis non, mattis magna. Duis feugiat dui mi, eget iaculis ligula gravida congue. Nam quis mauris id eros imperdiet imperdiet. In et dolor non nisi vestibulum rhoncus nec eget dolor.',
+      'Behind every great business is a powerful narrative, but most of the world will never hear the tale. All small businesses struggle with three main issues - they don’t have the time, the team or the confidence to spread their message. As a result, this leads to missed opportunities and competitor success. Your story from creating the concept of your business, to securing your first client, to where you are today was meant to be heard. Through establishing an online presence, you will match with an audience who hear your calling and see the value in what your company provides. This is why we are here to guide businesses into enhancing brand awareness and driving sales through developing a strategic social media identity. By expanding brand visibility, we create income streams and foster growth opportunities, ultimately increasing sales and revenue for your company.',
     tagline: 'Mission and Values',
   },
 };
@@ -231,6 +233,8 @@ export const features3About: FeaturesProps = {
 };
 
 // Features data on About page *******************
+
+
 export const featuresAbout: FeaturesProps = {
   id: 'features-on-about',
   hasBackground: true,
@@ -264,29 +268,36 @@ export const featuresAbout: FeaturesProps = {
 };
 
 // Team data on About page *******************
-export const teamAbout: TeamProps = {
+export const teamHeader: TeamProps = {
   id: 'team-on-about',
   hasBackground: true,
   header: {
-    title: 'Meet our executive team',
-    subtitle:
-      'Proin quis neque vehicula, sagittis felis ut, scelerisque mi. Nullam consequat, erat eu luctus sodales, ipsum tellus facilisis magna, eu condimentum lectus.',
+    title: 'Meet our team',
+    // subtitle:
+    //   'Meet us',
     tagline: 'team',
+  },
+};
+
+export const teamAbout: TeamProps = {
+  id: 'team-on-about',
+  hasBackground: true,
+  ifDesc: true,
+  header: {
+    // title: 'Jerome',
+    subtitle:
+      'Hi! My name is Jerome Jermaine and I am a co-founder of JnB Production Studios. I have been passionate about content creation and performing from a young age, finding immense joy in sharing my views and ideas through YouTube videos, musicals, and debates. Throughout the years, I became fascinated with how content creators have found ways to encapsulate our attention and build a loyal following. Similarly, I have found enjoyment in researching how businesses are able to create such brilliant advertisement campaigns to sell literally anything! I love the challenge of producing content which is both professional and captivating as it allows me to use my creative skills help businesses find their voice, similarly to how content creation allowed me to find my own.',
+    // tagline: 'team',
   },
   teams: [
     {
-      name: 'John Peterson',
-      occupation: 'Founder & CEO',
+      name: 'Jerome Nyako Jermaine',
+      occupation: 'Co-founder',
       image: {
-        src: 'https://images.unsplash.com/photo-1504257432389-52343af06ae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'John Peterson',
+        src: JeromeImg,
+        alt: 'Jerome Nyako Jermaine',
       },
       items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
         {
           title: 'Know more on Linkedin',
           icon: IconBrandLinkedin,
@@ -299,19 +310,209 @@ export const teamAbout: TeamProps = {
         },
       ],
     },
+    // {
+    //   name: 'Irfan Raja',
+    //   occupation: 'Co-founder',
+    //   image: {
+    //     src: IrfanImg,
+    //     alt: 'Irfan Raja',
+    //   },
+    //   items: [
+    //     // {
+    //     //   title: 'Know more on Twitter',
+    //     //   icon: IconBrandTwitter,
+    //     //   href: '#',
+    //     // },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: 'David Foster',
+    //   occupation: 'Chief Technology Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=80',
+    //     alt: 'David Foster',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: 'Mary Smith',
+    //   occupation: 'Chief Marketing Office',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1607503873903-c5e95f80d7b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Mary Smith',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: 'Michael Turner',
+    //   occupation: 'Chief Financial Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1619380061814-58f03707f082?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Michael Turner',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: 'Laura Adams',
+    //   occupation: 'Chief Customer Relations Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Laura Adams',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: 'Robert Williams',
+    //   occupation: 'Chief Operations Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Robert Williams',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: 'Emily Davis',
+    //   occupation: 'Chief Strategy Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Emily Davis',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+  ],
+};
+
+export const teamAbout2: TeamProps = {
+  id: 'team-on-about',
+  hasBackground: true,
+  ifDesc: true,
+  header: {
+    // title: 'Irfan Raja',
+    subtitle:
+      'Hey, I am one of the co-founders of JnB Production Studios. I have always been a lover of the arts and theatre and have always found this as a great way to explore my creativity. Until, I picked up a camera and realised the beauty behind combining one’s talent in their specialty and being able to capture those few fleeting moments. I have always been intrigued by the world of business and wanted to help merge individuals to showcase their skills and talent with the art of film, and creating a business which I can take pride in expressing myself to the utmost. That is when I realised that through my energetic and talkative nature, inherent curiosity in business and creative desires that starting up a marketing and advertisement business with my good friend and business partner Jerome, seemed like the perfect idea! I love making connections and being able to bridge the gap between passionate, professional creatives and small-medium enterprises with untapped potential to create the perfect recipe for a healthy business relationship!',
+    // tagline: 'team',
+  },
+  teams: [
+
     {
-      name: 'Sarah Mitchell',
-      occupation: 'Chief Creative Officer',
+      name: 'Irfan Raja',
+      occupation: 'Co-founder',
       image: {
-        src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Sarah Mitchell',
+        src: IrfanImg,
+        alt: 'Irfan Raja',
       },
       items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
+        // {
+        //   title: 'Know more on Twitter',
+        //   icon: IconBrandTwitter,
+        //   href: '#',
+        // },
         {
           title: 'Know more on Linkedin',
           icon: IconBrandLinkedin,
@@ -324,156 +525,156 @@ export const teamAbout: TeamProps = {
         },
       ],
     },
-    {
-      name: 'David Foster',
-      occupation: 'Chief Technology Officer',
-      image: {
-        src: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=80',
-        alt: 'David Foster',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
-    {
-      name: 'Mary Smith',
-      occupation: 'Chief Marketing Office',
-      image: {
-        src: 'https://images.unsplash.com/photo-1607503873903-c5e95f80d7b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Mary Smith',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
-    {
-      name: 'Michael Turner',
-      occupation: 'Chief Financial Officer',
-      image: {
-        src: 'https://images.unsplash.com/photo-1619380061814-58f03707f082?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Michael Turner',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
-    {
-      name: 'Laura Adams',
-      occupation: 'Chief Customer Relations Officer',
-      image: {
-        src: 'https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Laura Adams',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
-    {
-      name: 'Robert Williams',
-      occupation: 'Chief Operations Officer',
-      image: {
-        src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Robert Williams',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
-    {
-      name: 'Emily Davis',
-      occupation: 'Chief Strategy Officer',
-      image: {
-        src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Emily Davis',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
+    // {
+    //   name: 'David Foster',
+    //   occupation: 'Chief Technology Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=80',
+    //     alt: 'David Foster',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: 'Mary Smith',
+    //   occupation: 'Chief Marketing Office',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1607503873903-c5e95f80d7b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Mary Smith',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: 'Michael Turner',
+    //   occupation: 'Chief Financial Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1619380061814-58f03707f082?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Michael Turner',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: 'Laura Adams',
+    //   occupation: 'Chief Customer Relations Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Laura Adams',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: 'Robert Williams',
+    //   occupation: 'Chief Operations Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Robert Williams',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: 'Emily Davis',
+    //   occupation: 'Chief Strategy Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Emily Davis',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Know more on Twitter',
+    //       icon: IconBrandTwitter,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Know more on Linkedin',
+    //       icon: IconBrandLinkedin,
+    //       href: '#',
+    //     },
+    //     {
+    //       title: 'Contact by email',
+    //       icon: IconMail,
+    //       href: '#',
+    //     },
+    //   ],
+    // },
   ],
 };
 

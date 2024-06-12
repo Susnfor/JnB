@@ -74,7 +74,7 @@ export const headerData: HeaderProps = {
   ],
   actions: [
     {
-      text: 'Contact Us',
+      text: 'Contact',
       href: '/contact',
       targetBlank: true,
     },

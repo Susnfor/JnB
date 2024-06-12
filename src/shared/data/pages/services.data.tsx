@@ -161,7 +161,7 @@ export const features4Services: FeaturesProps = {
   isImageDisplayed: true,
   image: {
     src: starBackgroundImg,
-    alt: 'Hero TailNext',
+    alt: 'Hero man looking at tree',
   },
   items: [
     {
@@ -296,6 +296,7 @@ export const stepsServices: StepsProps = {
   },
   header: {
     title: '6 Months Timeline',
+    tagline: "Timeline"
   },
   items: [
     {

@@ -182,7 +182,7 @@ export const contentHomeOne: ContentProps = {
   header: {
     title: 'Why Choose Us',
     subtitle: 'We specialize in unlocking the full potential of your brand',
-    tagline: 'Content',
+    tagline: 'Why us',
   },
   content:
     'At JnB services we like to tailor make a team suited to your social media goals, by creating a marriage between professional creatives with passionate, aspiring business owners. ',

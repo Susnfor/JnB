@@ -10,6 +10,7 @@ import Hero2 from '~/components/widgets/Hero2';
 import Stats from '~/components/widgets/Stats';
 import Steps from '~/components/widgets/Steps';
 import Team2 from '~/components/widgets/Team2';
+import Team from '~/components/widgets/Team';
 import Testimonials2 from '~/components/widgets/Testimonials2';
 import {
   contactAbout,
@@ -23,6 +24,8 @@ import {
   testimonials2About,
   featuresAbout,
   teamAbout,
+  teamAbout2,
+  teamHeader
 } from '~/shared/data/pages/about.data';
 
 export const metadata: Metadata = {
@@ -39,7 +42,9 @@ const Page = () => {
       {/* <Steps {...stepsAbout} /> */}
       {/* <Features3 {...features3About} /> */}
       {/* <Features {...featuresAbout} /> */}
-      <Team2 {...teamAbout} />
+      <Team {...teamHeader} />
+      <Team {...teamAbout} />
+      <Team {...teamAbout2} />
       <Testimonials2 {...testimonials2About} />
       {/* <FAQs {...faqsAbout} /> */}
       <Contact {...contactAbout} />

@@ -3,12 +3,14 @@ import { TeamProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 import ItemTeam from '../common/ItemTeam';
 
-const Team = ({ header, teams, id, hasBackground = false }: TeamProps) => (
+
+
+const Team = ({ header, teams, id, hasBackground = false, ifDesc = false, }: TeamProps) => (
   <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
-    {header && <Headline header={header} titleClass="text-2xl sm:text-3xl" />}
+    {header && !ifDesc && <Headline header={header} titleClass="text-2xl sm:text-5xl" />}
     <div className="flex items-stretch justify-center">
-      <div className="grid grid-cols-1 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
-        {teams.map(({ name, occupation, image, items }, index) => (
+      <div className="grid grid-cols-1 gap-4 dark:text-white  ">
+        {teams && teams.map(({ name, occupation, image, items }, index) => (
           <div key={`item-team-${index}`} className="p-2">
             <ItemTeam
               name={name}
@@ -26,6 +28,7 @@ const Team = ({ header, teams, id, hasBackground = false }: TeamProps) => (
         ))}
       </div>
     </div>
+{header && ifDesc && <Headline header={header} titleClass="text-2xl sm:text-3xl" />}
   </WidgetWrapper>
 );
 

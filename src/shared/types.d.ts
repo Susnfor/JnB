@@ -297,7 +297,8 @@ type StepsProps = Widget & {
 
 type TeamProps = Widget & {
   header?: Header;
-  teams: Array<Team>;
+  ifDesc?: Boolean;
+  teams?: Array<Team>;
 };
 
 type AnnouncementProps = {

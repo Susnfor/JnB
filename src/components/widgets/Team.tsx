@@ -1,4 +1,4 @@
-import Headline from '../common/Headline';
+import Headline from '../common/Headline2';
 import { TeamProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 import ItemTeam from '../common/ItemTeam';

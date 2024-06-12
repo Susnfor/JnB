@@ -54,17 +54,17 @@ export const heroHome: HeroProps = {
   ),
   callToAction: {
     text: 'Our Services',
-    href: 'https://github.com/onwidget/tailnext',
+    href: '/services',
     icon: IconListDetails,
     targetBlank: true,
   },
   callToAction2: {
     text: 'Contact Us',
-    href: '/',
+    href: '/contact',
   },
   image: {
     src: heroImg,
-    alt: 'Hero TailNext',
+    alt: 'Hero JnB',
   },
 };
 

@@ -16,46 +16,48 @@ export async function POST(request) {
     console.log(formData)
 
      //nodemailer object, which will send email
-  const transporter = nodemailer.createTransport({
+  const transporter = await nodemailer.createTransport({
     // host: "smtp-mail.outlook.com",
     // port: 587,
     // tls: {
     //     ciphers: "SSLv3",
     //     rejectUnauthorized: false,
     // },
+    port: 465,
+    host: "smtp.gmail.com",
     service: 'gmail',
+    tls: { rejectUnauthorized: false },
 
     auth: {
 
         user: username,
         pass: password
-    }
+    },
+    secure: true,
 });
 
 //actually send email
-try {
+        try {
 
-    const mail = await transporter.sendMail({
-        from: username,
-        to: myEmail,
-        replyTo: email,
-        subject: `Website activity from ${email}`,
-        html: `
-        <h1>Contact Form from Website</h1>
-        <p>Name: ${name} </p>
-        <p>Email: ${email} </p>
-        <p>Message: ${message} </p>
-        <p>Message: ${radio} </p>
-        <p>Data: ${formData} <p>
-        `,
-    })
+            const mail = await transporter.sendMail({
+                from: username,
+                to: myEmail,
+                replyTo: email,
+                subject: `Website activity from ${email}`,
+                html: `
+                <h1>Contact Form from Website</h1>
+                <p>Name: ${name} </p>
+                <p>Email: ${email} </p>
+                <p>Message: ${message} </p>
+                <p>Message: ${radio} </p>
+                `,
+            })
 
-    return NextResponse.json({ message: "Success: email was sent" })
+            return NextResponse.json({ message: "Success: email was sent" })
 
-} catch (error) {
-    console.log(error)
-    NextResponse.status(500).json({ message: "COULD NOT SEND MESSAGE" })
+        } catch (error) {
+            console.log(error)
+            NextResponse.status(500).json({ message: "COULD NOT SEND MESSAGE" })
+        }
+
 }
-
-  }
- 

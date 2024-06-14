@@ -30,12 +30,12 @@ export const contact2Contact: ContactProps = {
   items: [
     {
       title: 'Our Address',
-      description: ['1230 Maecenas Street Donec Road', 'New York, EEUU'],
+      description: [''],
       icon: IconMapPin,
     },
     {
       title: 'Contact',
-      description: ['Mobile: +1 (123) 456-7890', 'Mail: tailnext@gmail.com'],
+      description: ['Mobile: ', 'Mail: '],
       icon: IconPhoneCall,
     },
     {
@@ -107,6 +107,7 @@ export const contact2Contact: ContactProps = {
       title: 'Send Message',
       type: 'submit',
     },
+    btnPosition: 'center',
   },
 };
 

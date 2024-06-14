@@ -1,6 +1,7 @@
 import { NextResponse, NextRequest } from 'next/server' //retrieve forData object
 const nodemailer = require('nodemailer');
 
+
 // Handles POST requests to /api
 
 export async function POST(request) {
@@ -33,16 +34,15 @@ export async function POST(request) {
         user: username,
         pass: password
     },
-    secure: true,
 });
 
 //actually send email
         try {
-
-            const mail = await transporter.sendMail({
+            let mailOptions = {
                 from: username,
                 to: myEmail,
                 replyTo: email,
+                credentials: '',
                 subject: `Website activity from ${email}`,
                 html: `
                 <h1>Contact Form from Website</h1>
@@ -51,10 +51,10 @@ export async function POST(request) {
                 <p>Message: ${message} </p>
                 <p>Message: ${radio} </p>
                 `,
-            })
+            }
+            const mail = await transporter.sendMail(mailOptions);
 
             return NextResponse.json({ message: "Success: email was sent" })
-
         } catch (error) {
             console.log(error)
             NextResponse.status(500).json({ message: "COULD NOT SEND MESSAGE" })

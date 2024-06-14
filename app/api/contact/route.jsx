@@ -3,18 +3,22 @@ const nodemailer = require('nodemailer');
 
 
 // Handles POST requests to /api
-
 export async function POST(request) {
+
+    //nodemailer credentials from env
     const username = process.env.NEXT_PUBLIC_EMAIL_USERNAME;
     const password = process.env.NODEMAILER_PW;
     const myEmail = process.env.NODEMAILER_EMAIL;
 
-    const formData = await request.formData() // get form data , name exported data
+    const formData = await request.formData() // get form data , (name section of form)
     const name = formData.get('name')
+    const lastName = formData.get('lastName')
     const email = formData.get('email')
     const message = formData.get('textarea')
-    const radio = formData.get('radioBtns.radios')
-    console.log(formData)
+    const SFC = formData.get('SFC Package')
+    const YTandTT = formData.get('Youtube and Tiktok Package')
+    const Podcast = formData.get('Podcast Package')
+
 
      //nodemailer object, which will send email
   const transporter = await nodemailer.createTransport({
@@ -43,13 +47,17 @@ export async function POST(request) {
                 to: myEmail,
                 replyTo: email,
                 credentials: '',
-                subject: `Website activity from ${email}`,
+                subject: `JnB Contact Form from ${email}`,
                 html: `
-                <h1>Contact Form from Website</h1>
-                <p>Name: ${name} </p>
-                <p>Email: ${email} </p>
+                <h2>Details</h2>
+                <p>Name: ${name + " " + (lastName ? lastName : "")} </p>
+                <p>Email: ${email} </p> 
+                <h2>What is the reason for them contacting?</h2>
+                <p>${SFC || YTandTT || Podcast ? "The package they're enquiring about is:" : "They didn't select a package"}
+                ${ SFC ? "SFC Package" : ""}
+                ${YTandTT ? "Youtube and Tiktok Package" : ""} 
+                ${Podcast ? "Podcast Package" : ""} </p>
                 <p>Message: ${message} </p>
-                <p>Message: ${radio} </p>
                 `,
             }
             const mail = await transporter.sendMail(mailOptions);

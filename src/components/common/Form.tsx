@@ -4,6 +4,31 @@ import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { FormProps } from '../../shared/types';
 
+async function handleSubmit(event: any) { //event handler for submitting the form
+  event.preventDefault(); //prevent browser reloading page
+
+  const formData = new FormData(event.target)
+
+  try { //try fetch data
+  const response = await fetch('/api/contact', { //sends post request to /api/...
+      method: 'post',
+      body: formData,
+     });
+     if (!response.ok) {
+      console.log("falling over")
+      throw new Error(`response status: ${response.status}`);
+  }
+  const responseData = await response.json();
+  console.log(responseData['message'])
+
+  alert('Message successfully sent');
+} catch (err) {
+  console.error(err);
+  alert("Error, please try resubmitting the form");
+}
+     
+};
+
 const Form = ({
   title,
   description,
@@ -52,7 +77,7 @@ const Form = ({
   };
 
   return (
-    <form id="contactForm" className={twMerge('', containerClass)}>
+    <form id="contactForm" onSubmit={handleSubmit} className={twMerge('', containerClass)}>
       {title && <h2 className={`${description ? 'mb-2' : 'mb-4'} text-2xl font-bold`}>{title}</h2>}
       {description && <p className="mb-4">{description}</p>}
       <div className="mb-6">

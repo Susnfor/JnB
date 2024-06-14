@@ -215,7 +215,7 @@ export const footerData: FooterProps = {
     <div className="mr-4 text-sm">
       <a
         className="font-semibold text-slate-900 dark:text-gray-200 hover:text-blue-600 hover:underline dark:hover:text-blue-600"
-        href="https://onwidget.com/"
+        href="#"
       >
         {' '}
         JnB

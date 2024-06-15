@@ -110,7 +110,7 @@ type Image = {
 
 type Item = {
   title?: string | boolean | number;
-  description?: string | Array<string> | ReactElement;
+  description?: string | Array<string>;
   href?: string;
   form?: SmallForm;
   icon?: Icon;

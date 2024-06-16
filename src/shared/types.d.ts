@@ -128,7 +128,7 @@ type ItemFAQ = {
 
 type ItemGrid = {
   id?: string;
-  items?: Array<Item>;
+  items?: Array<ItemFAQ>;
   columns?: number;
   defaultColumns?: number;
   defaultIcon?: Icon;

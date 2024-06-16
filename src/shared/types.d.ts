@@ -110,6 +110,15 @@ type Image = {
 
 type Item = {
   title?: string | boolean | number;
+  description?: string | Array<string>;
+  href?: string;
+  form?: SmallForm;
+  icon?: Icon;
+  callToAction?: CallToActionType;
+};
+
+type ItemFAQ = {
+  title?: string | boolean | number;
   description?: string | Array<string> | ReactElement;
   href?: string;
   form?: SmallForm;
@@ -245,7 +254,7 @@ type HeroProps = {
 
 type FAQsProps = Widget & {
   header?: Header;
-  items?: Array<Item>;
+  items?: Array<ItemFAQ>;
   columns?: number;
   tabs?: Array<Tab>;
   callToAction?: CallToActionType;

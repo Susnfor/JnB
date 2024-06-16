@@ -25,7 +25,7 @@ const Contact = ({ header, content, items, form, id, hasBackground = false }: Co
                       </p>
                     ) : (
                       description &&
-                      description.map((desc, index) => (
+                      description.map((desc:string, index:number) => (
                         <p key={`text-description-${index}`} className="text-gray-600 dark:text-slate-400">
                           {desc}
                         </p>
